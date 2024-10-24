@@ -30,6 +30,12 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c17" />
+			<Add option="-DWINVER=0x0601" />
+			<Add option="-DWIN32" />
+			<Add option="-D_WIN32" />
+			<Add directory="." />
+			<Add directory="lvgl" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -3437,7 +3443,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/tests/unity/unity_support.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
